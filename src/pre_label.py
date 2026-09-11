@@ -2,7 +2,7 @@
 pre_label.py
 
 Uses an LLM to pre-fill draft intent labels for the customer support message sample.
-Expects OPENAI_API_KEY to be set in a .env file.
+Expects GEMINI_API_KEY to be set in a .env file.
 """
 
 import os
@@ -12,9 +12,10 @@ import pandas as pd
 from dotenv import load_dotenv
 
 try:
-    from openai import OpenAI
+    from google import genai
+    from google.genai import types
 except ImportError:
-    logging.error("Please install openai: pip install openai python-dotenv")
+    logging.error("Please install the Gemini SDK: pip install google-genai python-dotenv")
     exit(1)
 
 logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
@@ -41,20 +42,20 @@ Your response must be ONLY the category name (e.g., "delivery_delay" or "other")
 
 def call_llm_with_retry(client, text, max_retries=3):
     """
-    Calls the LLM API with simple exponential backoff for rate limits.
+    Calls the Gemini API with simple exponential backoff for rate limits.
     """
     for attempt in range(max_retries):
         try:
-            response = client.chat.completions.create(
-                model="gpt-4o-mini", # Can be changed to gpt-3.5-turbo or others
-                messages=[
-                    {"role": "system", "content": SYSTEM_PROMPT},
-                    {"role": "user", "content": text}
-                ],
-                temperature=0.0,
-                max_tokens=10
+            response = client.models.generate_content(
+                model="gemini-1.5-flash",
+                contents=text,
+                config=types.GenerateContentConfig(
+                    system_instruction=SYSTEM_PROMPT,
+                    temperature=0.0,
+                    max_output_tokens=10,
+                )
             )
-            val = response.choices[0].message.content.strip().lower()
+            val = response.text.strip().lower()
             # Basic cleanup in case the LLM includes punctuation
             return val.replace("'", "").replace('"', '').replace('.', '')
             
@@ -68,15 +69,21 @@ def call_llm_with_retry(client, text, max_retries=3):
                 return "other"
 
 def main():
-    # Load env vars from .env file
-    load_dotenv()
+    # Calculate explicit path to .env file in the project directory
+    project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    env_path = os.path.join(project_root, '.env')
     
-    api_key = os.getenv("OPENAI_API_KEY")
+    # Load env vars explicitly from that file FIRST
+    load_dotenv(dotenv_path=env_path)
+    
+    api_key = os.getenv("GEMINI_API_KEY")
     if not api_key:
-        logger.error("No OPENAI_API_KEY found. Please create a .env file with OPENAI_API_KEY=your_key.")
+        logger.error(f"No GEMINI_API_KEY found. Looked for .env file exactly at: {env_path}")
         return
         
-    client = OpenAI(api_key=api_key)
+    logger.info(f"Loaded .env successfully from: {env_path}")
+    
+    client = genai.Client(api_key=api_key)
     
     input_path = os.path.join("notebooks", "sample_for_labeling.csv")
     output_path = os.path.join("notebooks", "sample_for_labeling_prelabeled.csv")

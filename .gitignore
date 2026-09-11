@@ -1,7 +1,16 @@
-/data/*
-!/data/.gitkeep
-__pycache__/
-*.pyc
+# Environment variables / secrets
 .env
-.venv
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
 venv/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
