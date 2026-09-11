@@ -47,7 +47,7 @@ def call_llm_with_retry(client, text, max_retries=3):
     for attempt in range(max_retries):
         try:
             response = client.models.generate_content(
-                model="gemini-1.5-flash",
+                model="gemini-2.5-flash",
                 contents=text,
                 config=types.GenerateContentConfig(
                     system_instruction=SYSTEM_PROMPT,
