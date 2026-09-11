@@ -13,7 +13,6 @@ from dotenv import load_dotenv
 
 try:
     from google import genai
-    from google.genai import types
 except ImportError:
     logging.error("Please install the Gemini SDK: pip install google-genai python-dotenv")
     exit(1)
@@ -46,16 +45,12 @@ def call_llm_with_retry(client, text, max_retries=3):
     """
     for attempt in range(max_retries):
         try:
-            response = client.models.generate_content(
-                model="gemini-2.5-flash",
-                contents=text,
-                config=types.GenerateContentConfig(
-                    system_instruction=SYSTEM_PROMPT,
-                    temperature=0.0,
-                    max_output_tokens=10,
-                )
+            interaction = client.interactions.create(
+                model="gemini-3.6-flash",
+                input=text,
+                system_instruction=SYSTEM_PROMPT
             )
-            val = response.text.strip().lower()
+            val = interaction.output_text.strip().lower()
             # Basic cleanup in case the LLM includes punctuation
             return val.replace("'", "").replace('"', '').replace('.', '')
             
