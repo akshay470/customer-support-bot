@@ -39,7 +39,7 @@ Categorize the user's message into exactly ONE of the following categories:
 Your response must be ONLY the category name (e.g., "delivery_delay" or "other"). Do not include quotes, punctuation, or any other text.
 """
 
-def call_llm_with_retry(client, text, max_retries=3):
+def call_llm_with_retry(client, text, row_idx, max_retries=3):
     """
     Calls the Gemini API with simple exponential backoff for rate limits.
     """
@@ -57,10 +57,10 @@ def call_llm_with_retry(client, text, max_retries=3):
         except Exception as e:
             if attempt < max_retries - 1:
                 sleep_time = 2 ** attempt
-                logger.warning(f"API error: {e}. Retrying in {sleep_time}s...")
+                logger.warning(f"Row {row_idx} API error: {type(e).__name__}: {e}. Retrying in {sleep_time}s...")
                 time.sleep(sleep_time)
             else:
-                logger.error(f"Failed to get response after {max_retries} attempts.")
+                logger.error(f"Row {row_idx} failed after {max_retries} attempts. Final error: {type(e).__name__}: {e}")
                 return "other"
 
 def main():
@@ -100,7 +100,7 @@ def main():
     
     for idx, row in df.iterrows():
         text = str(row['text'])
-        label = call_llm_with_retry(client, text)
+        label = call_llm_with_retry(client, text, row_idx=idx)
         suggested_labels.append(label)
         
         # Simple progress tracking
@@ -108,8 +108,8 @@ def main():
         if count % 10 == 0 or count == total_rows:
             logger.info(f"Labeled {count}/{total_rows}")
             
-        # Optional: Add small sleep to avoid hitting base rate limits if on free tier
-        time.sleep(0.1)
+        # Add safety buffer between calls to avoid per-minute rate limits, even with billing active
+        time.sleep(1.5)
         
     # Write to a NEW column, leaving intent_label untouched
     df['llm_suggested_label'] = suggested_labels
