@@ -1,0 +1,18 @@
+
+# BASELINE COMPARISON OVERVIEW
+| Metric | Trivial (n=150) | Simple (n=150) | Zero-Shot LLM (n=150) | Few-Shot LLM (n=133) |
+|---|---|---|---|---|
+| **Overall Accuracy** | 34.0% | 42.0% | 70.0% | 66.9% |
+
+# PER-INTENT BREAKDOWN
+| Intent | Trivial | Simple | Zero-Shot | Few-Shot |
+|---|---|---|---|---|
+| account_access | 0.0% | 42.9% | 71.4% | 80.0% |
+| account_settings | 0.0% | 100.0% | 100.0% | N/A |
+| agent_escalation | 0.0% | 44.4% | 83.3% | 43.8% |
+| contact_request | 0.0% | 0.0% | 60.0% | 100.0% |
+| delivery_delay | 0.0% | 33.3% | 72.2% | 85.3% |
+| order_status | 0.0% | 25.0% | 58.3% | 80.0% |
+| other | 100.0% | 62.7% | 72.5% | 57.1% |
+| product_availability | 0.0% | 50.0% | 75.0% | 100.0% |
+| wrong_delivery | 0.0% | 12.5% | 50.0% | 57.1% |

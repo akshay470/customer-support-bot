@@ -1,0 +1,15 @@
+Majority class predicted: other
+
+OVERALL ACCURACY: 51/150 (34.0%)
+
+Intent                    | Count | Accuracy
+--------------------------------------------------
+account_access            | 7     | 0.0%
+account_settings          | 1     | 0.0%
+agent_escalation          | 18    | 0.0%
+contact_request           | 5     | 0.0%
+delivery_delay            | 36    | 0.0%
+order_status              | 12    | 0.0%
+other                     | 51    | 100.0%
+product_availability      | 4     | 0.0%
+wrong_delivery            | 16    | 0.0%

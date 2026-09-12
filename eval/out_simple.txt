@@ -1,0 +1,13 @@
+OVERALL ACCURACY: 63/150 (42.0%)
+
+Intent                    | Count | Accuracy
+--------------------------------------------------
+account_access            | 7     | 42.9%
+account_settings          | 1     | 100.0%
+agent_escalation          | 18    | 44.4%
+contact_request           | 5     | 0.0%
+delivery_delay            | 36    | 33.3%
+order_status              | 12    | 25.0%
+other                     | 51    | 62.7%
+product_availability      | 4     | 50.0%
+wrong_delivery            | 16    | 12.5%
