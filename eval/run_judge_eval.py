@@ -21,6 +21,7 @@ def main():
     load_index()
     
     results = []
+    human_results = []
     
     print(f"Running LLM-as-judge evaluation on {len(samples)} samples...\n")
     
@@ -48,6 +49,12 @@ def main():
         
         reply_result = draft_reply(customer_text, intent)
         drafted_text = reply_result.get("draft_reply", "")
+        
+        human_results.append({
+            "customer_text": customer_text,
+            "drafted_reply": drafted_text if drafted_text else "(Draft generation failed)"
+        })
+        
         if not drafted_text or reply_result.get("failed"):
             print(f"Skipped [{idx}]: draft generation failed")
             continue
@@ -94,22 +101,21 @@ def main():
         out_path = os.path.join(eval_dir, "judge_scores.csv")
         df_results.to_csv(out_path, index=False)
         print(f"\nSaved judge scores to {out_path}")
-        
-        # Save Template for Human Review
-        human_cols = [
-            "customer_text", "drafted_reply",
-            "human_groundedness", "human_relevance", "human_tone", 
-            "human_completeness", "human_overall", "human_reasoning"
-        ]
-        df_human = df_results[["customer_text", "drafted_reply"]].copy()
-        for col in human_cols[2:]:
-            df_human[col] = ""
-            
-        human_path = os.path.join(eval_dir, "human_review_template.csv")
-        df_human.to_csv(human_path, index=False)
-        print(f"Saved human review template to {human_path}")
     else:
-        print("\nNo rows successfully evaluated to save.")
+        print("\nNo rows successfully evaluated for judge_scores.csv.")
+        
+    # Always save Template for Human Review
+    df_human = pd.DataFrame(human_results)
+    human_cols = [
+        "human_groundedness", "human_relevance", "human_tone", 
+        "human_completeness", "human_overall", "human_reasoning"
+    ]
+    for col in human_cols:
+        df_human[col] = ""
+        
+    human_path = os.path.join(eval_dir, "human_review_template.csv")
+    df_human.to_csv(human_path, index=False)
+    print(f"Saved human review template ({len(df_human)} rows) to {human_path}")
     
     # Calculate distributions
     if not df_results.empty and 'overall' in df_results.columns:
