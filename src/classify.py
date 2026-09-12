@@ -57,6 +57,8 @@ def classify_intent(text: str, client=None, max_retries=3) -> dict:
             return {"intent": "other", "confidence": "low"}
             
     for attempt in range(max_retries):
+        # Enforce minimum 3s delay before every call
+        time.sleep(3.0)
         try:
             response = client.chat.completions.create(
                 model="openai/gpt-oss-20b",
@@ -93,7 +95,20 @@ def classify_intent(text: str, client=None, max_retries=3) -> dict:
             return {"intent": "other", "confidence": "low"}
         except Exception as e:
             if attempt < max_retries - 1:
-                sleep_time = 2 ** attempt
+                sleep_time = 3.0 + (2 ** attempt)
+                e_str = str(e)
+                if "RateLimit" in type(e).__name__ or "rate_limit" in e_str or "429" in e_str:
+                    import re
+                    match = re.search(r'try again in (?:(\d+)m)?([\d\.]+)s', e_str)
+                    if match:
+                        mins = int(match.group(1)) if match.group(1) else 0
+                        secs = float(match.group(2))
+                        sleep_time = mins * 60 + secs + 1.0 # Buffer 1s
+                
+                if sleep_time > 10.0:
+                    logger.warning(f"Sleep time too large ({sleep_time}s), failing fast.")
+                    break
+                        
                 logger.warning(f"API error: {type(e).__name__}: {e}. Retrying in {sleep_time}s...")
                 time.sleep(sleep_time)
             else:

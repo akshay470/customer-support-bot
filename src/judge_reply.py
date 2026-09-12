@@ -67,6 +67,8 @@ DRAFTED REPLY:
     
     max_retries = 3
     for attempt in range(max_retries):
+        # Enforce minimum 3s delay before every call
+        time.sleep(3.0)
         try:
             response = client.chat.completions.create(
                 model="openai/gpt-oss-120b", # Reliable Groq model for reasoning/JSON
@@ -89,9 +91,24 @@ DRAFTED REPLY:
             
         except groq.APIStatusError as e:
             if e.status_code == 429: # Rate limit
-                wait_time = (attempt + 1) * 3
-                logger.warning(f"Rate limited. Waiting {wait_time}s before retry.")
-                time.sleep(wait_time)
+                sleep_time = 3.0 + (2 ** attempt)
+                e_str = str(e)
+                import re
+                match = re.search(r'try again in (?:(\d+)m)?([\d\.]+)s', e_str)
+                if match:
+                    mins = int(match.group(1)) if match.group(1) else 0
+                    secs = float(match.group(2))
+                    sleep_time = mins * 60 + secs + 1.0 # Buffer 1s
+                
+                if sleep_time > 10.0:
+                    logger.warning(f"Sleep time too large ({sleep_time}s), failing fast.")
+                    return {
+                        "groundedness": None, "relevance": None, "tone": None, "completeness": None, "overall": None,
+                        "judge_reasoning": "Failed to judge due to API or Parsing Error."
+                    }
+                    
+                logger.warning(f"Rate limited. Waiting {sleep_time}s before retry.")
+                time.sleep(sleep_time)
             else:
                 logger.error(f"Groq API Error: {e}")
                 break

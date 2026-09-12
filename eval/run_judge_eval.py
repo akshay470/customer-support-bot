@@ -44,13 +44,17 @@ def main():
                         intent = possible_intent
                         break
                 
-        time.sleep(2.0)
+        time.sleep(3.0) # Buffer before draft
         
         reply_result = draft_reply(customer_text, intent)
         drafted_text = reply_result.get("draft_reply", "")
+        if not drafted_text or reply_result.get("failed"):
+            print(f"Skipped [{idx}]: draft generation failed")
+            continue
+            
         context_str = reply_result.get("context_used", "None")
         
-        time.sleep(2.0)
+        time.sleep(3.0) # Buffer before judge
         
         # 2. Judge evaluation
         scores = judge_reply(
@@ -58,7 +62,9 @@ def main():
             drafted_reply=drafted_text,
             retrieved_context=[context_str]
         )
-        
+        if not isinstance(scores, dict):
+            scores = {}
+            
         overall = scores.get('overall')
         overall_str = overall if overall is not None else "failed"
         print(f"Judged [{idx}]: {intent} -> Overall {overall_str}/5")
@@ -84,26 +90,33 @@ def main():
     
     # Save Full Judged Output
     df_results = pd.DataFrame(results)
-    out_path = os.path.join(eval_dir, "judge_scores.csv")
-    df_results.to_csv(out_path, index=False)
-    print(f"\nSaved judge scores to {out_path}")
-    
-    # Save Template for Human Review
-    human_cols = [
-        "customer_text", "drafted_reply",
-        "human_groundedness", "human_relevance", "human_tone", 
-        "human_completeness", "human_overall", "human_reasoning"
-    ]
-    df_human = df_results[["customer_text", "drafted_reply"]].copy()
-    for col in human_cols[2:]:
-        df_human[col] = ""
+    if not df_results.empty:
+        out_path = os.path.join(eval_dir, "judge_scores.csv")
+        df_results.to_csv(out_path, index=False)
+        print(f"\nSaved judge scores to {out_path}")
         
-    human_path = os.path.join(eval_dir, "human_review_template.csv")
-    df_human.to_csv(human_path, index=False)
-    print(f"Saved human review template to {human_path}")
+        # Save Template for Human Review
+        human_cols = [
+            "customer_text", "drafted_reply",
+            "human_groundedness", "human_relevance", "human_tone", 
+            "human_completeness", "human_overall", "human_reasoning"
+        ]
+        df_human = df_results[["customer_text", "drafted_reply"]].copy()
+        for col in human_cols[2:]:
+            df_human[col] = ""
+            
+        human_path = os.path.join(eval_dir, "human_review_template.csv")
+        df_human.to_csv(human_path, index=False)
+        print(f"Saved human review template to {human_path}")
+    else:
+        print("\nNo rows successfully evaluated to save.")
     
     # Calculate distributions
-    valid_scores = df_results.dropna(subset=['overall'])
+    if not df_results.empty and 'overall' in df_results.columns:
+        valid_scores = df_results.dropna(subset=['overall'])
+    else:
+        valid_scores = pd.DataFrame()
+        
     num_valid = len(valid_scores)
     
     print("\n" + "="*40)
