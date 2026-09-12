@@ -18,8 +18,6 @@ def main():
     
     # We want 10 samples with diverse values
     label_col = 'intent_label'
-    if df[label_col].isna().all():
-        label_col = 'llm_suggested_label'
         
     labeled_df = df[df[label_col].notna()]
     
@@ -41,6 +39,9 @@ def main():
     print(f"{'TEXT':<55} | {'PREDICTED':<20} | {'ACTUAL':<20} | {'MATCH':<5} | {'CONFIDENCE'}")
     print("-" * 130)
     
+    correct = 0
+    total = len(samples)
+    
     for idx, row in samples.iterrows():
         text = str(row['text'])
         # Truncate text for printing safely without breaking lines
@@ -54,8 +55,13 @@ def main():
         confidence = result["confidence"]
         
         match = "YES" if predicted == actual else "NO"
+        if predicted == actual:
+            correct += 1
         
         print(f"{short_text:<55} | {predicted:<20} | {actual:<20} | {match:<5} | {confidence}")
+
+    print("-" * 130)
+    print(f"Overall Accuracy: {correct}/{total} ({(correct/total)*100:.1f}%)")
 
 if __name__ == "__main__":
     main()
