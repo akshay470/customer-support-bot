@@ -2,4 +2,6 @@ pandas
 numpy
 tqdm
 groq
+sentence-transformers
+numpy
 python-dotenv
