@@ -44,9 +44,13 @@ def main():
                         intent = possible_intent
                         break
                 
+        time.sleep(2.0)
+        
         reply_result = draft_reply(customer_text, intent)
         drafted_text = reply_result.get("draft_reply", "")
         context_str = reply_result.get("context_used", "None")
+        
+        time.sleep(2.0)
         
         # 2. Judge evaluation
         scores = judge_reply(
@@ -55,7 +59,9 @@ def main():
             retrieved_context=[context_str]
         )
         
-        print(f"Judged [{idx}]: {intent} -> Overall {scores.get('overall', 0)}/5")
+        overall = scores.get('overall')
+        overall_str = overall if overall is not None else "failed"
+        print(f"Judged [{idx}]: {intent} -> Overall {overall_str}/5")
         
         record = {
             "customer_text": customer_text,
@@ -97,14 +103,20 @@ def main():
     print(f"Saved human review template to {human_path}")
     
     # Calculate distributions
+    valid_scores = df_results.dropna(subset=['overall'])
+    num_valid = len(valid_scores)
+    
     print("\n" + "="*40)
-    print("AVERAGE JUDGE SCORES (1-5)")
+    print(f"AVERAGE JUDGE SCORES ({num_valid}/30 Valid)")
     print("="*40)
-    print(f"Groundedness: {df_results['groundedness'].mean():.2f}")
-    print(f"Relevance:    {df_results['relevance'].mean():.2f}")
-    print(f"Tone:         {df_results['tone'].mean():.2f}")
-    print(f"Completeness: {df_results['completeness'].mean():.2f}")
-    print(f"OVERALL:      {df_results['overall'].mean():.2f}")
+    if num_valid > 0:
+        print(f"Groundedness: {valid_scores['groundedness'].mean():.2f}")
+        print(f"Relevance:    {valid_scores['relevance'].mean():.2f}")
+        print(f"Tone:         {valid_scores['tone'].mean():.2f}")
+        print(f"Completeness: {valid_scores['completeness'].mean():.2f}")
+        print(f"OVERALL:      {valid_scores['overall'].mean():.2f}")
+    else:
+        print("No valid scores to calculate averages.")
     print("="*40)
 
 if __name__ == "__main__":

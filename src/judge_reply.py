@@ -101,6 +101,6 @@ DRAFTED REPLY:
             
     # Fallback response on failure
     return {
-        "groundedness": 0, "relevance": 0, "tone": 0, "completeness": 0, "overall": 0,
+        "groundedness": None, "relevance": None, "tone": None, "completeness": None, "overall": None,
         "judge_reasoning": "Failed to judge due to API or Parsing Error."
     }
