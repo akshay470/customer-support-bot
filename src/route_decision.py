@@ -79,16 +79,18 @@ def route_decision(
             "reason": "Escalated: strong negative sentiment detected (multiple exclamation marks)"
         }
         
-    # Simple all-caps check (words longer than 3 chars)
-    words = re.findall(r'\b[A-Z]{4,}\b', customer_message)
+    # Simple all-caps check (words longer than 3 chars), explicitly ignoring "USER"
+    words = [w for w in re.findall(r'\b[A-Z]{4,}\b', customer_message) if w != "USER"]
     if len(words) >= 2:
         return {
             "decision": "ESCALATE", 
             "reason": f"Escalated: strong negative sentiment detected (aggressive all-caps usage: {', '.join(words)})"
         }
         
+    max_score = max(retrieval_similarity_scores) if retrieval_similarity_scores else 0.0
+    
     # Otherwise
     return {
         "decision": "AUTO_HANDLE",
-        "reason": "Auto-Handled: intent confidence is high, grounding examples are strong, and no sensitive/angry language detected."
+        "reason": f"Auto-Handled: intent confidence is {confidence}, grounding examples are strong (similarities up to {max_score:.2f}), and no sensitive/angry language detected."
     }
