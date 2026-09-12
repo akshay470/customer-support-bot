@@ -28,7 +28,8 @@ def clean_text(text: str) -> str:
     text = re.sub(r'@\w+', '[USER]', text)
     
     # Strip trailing signatures like ^MA or ^AZ
-    text = re.sub(r'\s*\^[A-Za-z]{1,3}\b\s*$', '', text)
+    # Edge case: "some text ^JJ." (with period) is NOT stripped because it might be valid content
+    text = re.sub(r'\s*\^[A-Za-z]{1,3}\s*$', '', text)
     
     # Remove excessive whitespace (newlines, tabs, multiple spaces)
     text = re.sub(r'\s+', ' ', text).strip()
