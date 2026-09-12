@@ -1,0 +1,134 @@
+thread_id,tweet_id,text,timestamp,intent_label,llm_suggested_label
+983315,983315,[USER] アカウントが乗っ取られた電話も繋がらないし利用停止に出来ません。,2017-10-14 09:32:03+00:00,account_access,account_access
+2416363,2416363,[USER] why isn't my account unblocked my you guys,2017-10-29 09:14:34+00:00,account_access,account_access
+1366165,1366164,[USER] My account is suspended from past 20 days and I was told as soon as I get feedback on that account it would be reviewed and reinstate the account I started getting the feedback but no sign of the activation of the account and I am helpless now as it is the only income source,2017-11-25 12:12:55+00:00,account_access,account_access
+1016746,1016746,"[USER] I need your help! I created an account, then I bought something, now I don't remember the email I used. Help me!",2017-10-23 00:40:22+00:00,account_access,account_access
+1521125,1521125,[USER] i have twitch prime now for about 5 month but since the beginning of the month i see adds again. I also checked that i have still amazon prime. Could you help me out with this problem?,2017-11-03 17:22:52+00:00,account_access,account_access
+2263021,2263021,Extremely disappointed with the lack of #customerservice with [USER] Order 1__credit_card__ has yet to be delivered with the items described in the item description. Numerous chats and still being told I should reorder. Rethinking all future business with [USER] #amazonsucks,2017-11-20 23:35:46+00:00,agent_escalation,agent_escalation
+349141,349141,Amazon sale is very pathetic and fully dependable on their courier services. They even don't have final solution for their customers.,2017-10-08 07:39:38+00:00,agent_escalation,agent_escalation
+2757455,2757455,Damn Christine from [USER] really did me dirty on their customer support page. #TrashService,2017-11-21 02:51:02+00:00,agent_escalation,agent_escalation
+1673657,1673657,[USER] just had the worst experience ever with Amazon chat and phone support! HELP!,2017-11-06 17:25:59+00:00,agent_escalation,agent_escalation
+852803,852803,[USER] I would like a full refund. Amazon really slapped my head.,2017-10-20 15:33:04+00:00,agent_escalation,agent_escalation
+1775060,1775062,[USER] Amazon customer service is absolutely atrocious! I can't believe I've had to call customer service 5 times in the last week over this order!,2017-11-16 03:37:20+00:00,agent_escalation,agent_escalation
+1753339,1753339,[USER] [USER] #WTF unable to contact customer care. It's disconnecting after telling return time is over of every call. No othr option🤷🏻,2017-11-07 18:30:50+00:00,agent_escalation,agent_escalation
+1266397,1266392,[USER] Shining example of customer harassment Do u follow a SLA.. ur representative said on call due to festivals expect delay Will u ever refund,2017-10-26 12:48:27+00:00,agent_escalation,agent_escalation
+421365,421365,[USER] order tracking method is very pathetic in amazon.they dont update for days the status of the shipment at that point of time.,2017-10-10 08:04:53+00:00,agent_escalation,agent_escalation
+1133063,1133063,[USER] feeling harassed,2017-10-24 12:32:53+00:00,agent_escalation,agent_escalation
+563939,563939,[USER] can you please make sure your delivery staff are polite and courteous to their customers! It is never nice to hear that they have been outright rude to your mother! Thanks x,2017-12-02 23:47:57+00:00,agent_escalation,agent_escalation
+1662603,1662603,[USER] This link appears to be broken,2017-11-06 09:21:54+00:00,agent_escalation,agent_escalation
+2296659,2296659,I really can’t handle stupid people this early in the morning. I’m talk to you [USER] Third call into customer “care” #annoyed,2017-11-12 12:34:33+00:00,agent_escalation,agent_escalation
+772756,772756,[USER] after over 5 escalations you have been unable to consistently follow delivery instructions Delivery person isn't receiving them,2017-10-12 00:58:16+00:00,agent_escalation,agent_escalation
+2646251,2646251,"[USER] - Get your ship together! Disgraceful [USER] - Rules are rules & company turns a blind eye to relentless drivers within our area using bots to automatically accept blocks. Not fair but don’t know how to solve, burying head in the sand.",2017-11-17 21:50:05+00:00,agent_escalation,agent_escalation
+686693,686693,"[USER] cancels my order. No email about problems. Only noticed it was gone when checking on other order. Chat rep says leadership will reply & make it right. Hr later get cancellation email. No other response. That's how they ""made it right."" [USER] sucks.",2017-11-23 13:45:13+00:00,agent_escalation,agent_escalation
+1759694,1759694,[USER] Buen día! me gustaría si pudieran proporcionarme el correo del coordinador del proyecto de artesanos!! Hay buenas noticias,2017-11-07 17:16:17+00:00,contact_request,contact_request
+1457931,1457931,[USER] pouvez vous me suivre j’ai besoin de vous envoyer un message privé svp Merci,2017-11-02 20:29:31+00:00,contact_request,contact_request
+2530488,2530488,[USER] do you have an email address to lodge formal complaints?,2017-10-30 10:08:37+00:00,contact_request,contact_request
+2388967,2388967,Usually a very good service from [USER] - but twice iv had something late now in the space of a week!!! Really annoying as one item was for work!!! Not happy 😡😡😡😡😡,2017-11-14 08:10:21+00:00,delivery_delay,delivery_delay
+2853720,2853720,"Dites [USER] c'est une blague vos livraisons, non ? Chez des voisins qui n'existent pas et même pas identifiés.",2017-11-27 20:21:03+00:00,delivery_delay,delivery_delay
+1438206,1438206,Vamos a ver [USER] q mola q querais adelantar los envios x eso d q nos llegue antes pero si digo tal dia es xq el resto NO estoy. Y no mola cuando los repartidores insisten en dejarselo a un vecino o tienda y t dicen q el dia pactado no saben si el paquete saldrá... MAL!,2017-11-02 10:25:14+00:00,delivery_delay,delivery_delay
+319718,319718,[USER] It's been 3 days now your support and delivery agents are blaming each other for the delay in delivery will I even get my orders?,2017-10-07 11:20:07+00:00,delivery_delay,delivery_delay
+2676829,2676829,[USER] Bonjour mon colis est depuis ce matin 10h en cours de livraison est-ce normal ? Colis C10044461663 Merci d'avance,2017-10-31 13:54:18+00:00,delivery_delay,delivery_delay
+1141482,1141481,[USER] Yes that too by 4 days.ORDER # 403-1855304-7621937 Please speed up the delivery process,2017-10-16 07:39:11+00:00,delivery_delay,delivery_delay
+2507094,2507094,And still waiting the amazon delivery. Supposed to be here by 8pm at the latest - I’m thinking it won’t arrive by then 😫,2017-11-26 19:37:38+00:00,delivery_delay,delivery_delay
+1586210,1586210,[USER] i have lately seen many instances of delivery persons not delivering orders on time & falsely citing ‘i couldn’t be contacted’.,2017-11-04 17:27:02+00:00,delivery_delay,delivery_delay
+2367320,2367320,buy today on [USER] prime (Sunday) arrives earliest Wednesday? have amazon got so much power that they have deleted Monday and Tuesday from the week schedule or is this not even close to next day delivery?,2017-11-26 17:02:11+00:00,delivery_delay,delivery_delay
+1394419,1394419,"It seems that there is some delay, please update me the details , it is showing delayed it seems, Order# 402-7090913-5820366 [USER]",2017-10-16 16:05:59+00:00,delivery_delay,delivery_delay
+619931,619931,Pokémon Ultra Soleil que j’ai pré commander plus d’1 moi avant est toujours pas arrivé alors que Battlefront ll que j’ai acheté Vendredi ou Samedi est déjà arrivé cherchez l’erreur [USER] #WaitAndSee,2017-11-21 17:46:32+00:00,delivery_delay,delivery_delay
+424351,424351,[USER] your devilry boy not delivery and misbehavior language with my cell no. my order no. Tracking #: 447194187856,2017-10-10 11:05:55+00:00,delivery_delay,delivery_delay
+158648,158648,"[USER] bonjour, un de vos livreurs m’as appelé pendant que j’étais au travail pour un colis, celui-ci a disparu, impossible à joindre je ne sais pas où il est veillez me répondre. Cordialement",2017-11-24 17:57:50+00:00,delivery_delay,delivery_delay
+2496352,2496352,"[USER] [USER] If you can't actually manage same day delivery, stop offering it. I'm tired of being let down by this non-service.",2017-10-30 01:41:37+00:00,delivery_delay,delivery_delay
+2067643,2067643,警視庁に、とっとと通報しました。 この間、Amazonさんとトラブったから言うけれど、配達ミスとかのポカはあるけれど、少なくとも、こんなツッコミどころ満載の杜撰な請求をしてくることはない。 ド丁寧な対応があったから、その点は信頼してる。,2017-10-19 00:46:02+00:00,delivery_delay,delivery_delay
+457702,457702,amazon has 27.5 minutes left to deliver my package and i'm literally waiting on them at the door like:,2017-12-01 00:33:33+00:00,delivery_delay,delivery_delay
+1135034,1135034,.[USER] c'est bien de dire en chat et par mail que je vais recevoir ma cde ce jour pour au final apprendre que non #passérieux 😒,2017-11-03 17:02:23+00:00,delivery_delay,delivery_delay
+565815,565815,[USER] This is ridiculous. [USER] says they attempted to deliver my package two hours into the future. COME ON.,2017-12-03 01:04:50+00:00,delivery_delay,delivery_delay
+286835,286835,[USER] you didn't deliver to my neighbour like you said you would!!!now 3 days late,2017-10-06 14:47:45+00:00,delivery_delay,delivery_delay
+1783474,1783474,[USER] I'm trying to get more options for this late product but it's stuck at this box? Im just looking for a refund,2017-10-17 23:14:42+00:00,delivery_delay,delivery_delay
+490405,490405,"[USER] Hello, I've received a notification saying my item has been delivered. I've been home all day and can assure you it hasn't. Where is it please? Order # 206-1480209-2756313",2017-12-01 16:48:20+00:00,delivery_delay,delivery_delay
+2949346,2949346,I love when Amazon say that they have delivered something when you see the van drive up next to your house and then drive up without actually delivering anything 👌,2017-11-29 17:05:33+00:00,delivery_delay,delivery_delay
+2304445,2304445,Hey [USER] could you keep your delivery drivers from being unacceptably lazy and not attempting delivery and then stealing my packages? I want same day delivery not 3 days later and to be robbed. CNt wait for a viable competition in the market,2017-11-12 20:03:44+00:00,delivery_delay,delivery_delay
+330945,330945,[USER] [USER] [USER] Kindly note I haven't received any phone calls for delivery. Also I'm receiving courier service at my address since last 5 years.,2017-10-07 17:20:23+00:00,delivery_delay,delivery_delay
+2176415,2176415,[USER] Amazon courier guys in India fail to deliver order for 5 days in row and then badmouth your customers. Order# 403-0161310-6974739,2017-10-19 12:06:20+00:00,delivery_delay,delivery_delay
+2979660,2979660,I’m going to start giving my business to [USER] or [USER] - at least they can deliver a package on time. [USER] u should stop ‘guaranteeing’ delivery if 6 times out of the last 8 you couldn’t make it work. Same address 10 years! Why?,2017-11-30 04:07:28+00:00,delivery_delay,delivery_delay
+266859,266859,[USER] my package says delivery but there is nothing at my door! How do I report it??,2017-10-05 23:48:06+00:00,delivery_delay,delivery_delay
+976748,976748,[USER] I have ordered one plus 5 on 16oct but till yet I didn't receive my product it should be on 20th oct Kindly provide my product,2017-10-22 04:03:00+00:00,delivery_delay,delivery_delay
+1623533,1623533,"Rubbish service #amazon .. order Thurs, next day delivery.. it’s Sunday night. For 3 days it’s been out for delivery .. USELESS [USER]",2017-10-29 20:38:55+00:00,delivery_delay,delivery_delay
+1373192,1373192,When [USER] loses not 1 but 2 of your packages in less than 48 hours. #BLESSED,2017-10-28 00:22:00+00:00,delivery_delay,delivery_delay
+2275940,2275940,"[USER] [USER] Not sure why are we meeting so often. 406-9869071-4315507 showing delivered, I think I have gone blind as I can't see it at my home. Pathetic recurring mistake for a babycare product.",2017-11-11 07:22:02+00:00,delivery_delay,delivery_delay
+503464,503464,"Two deliveries failed to turn up today, and not a single notification or reason given. Both out for delivery, but never showed. Such poor service. Not cool, [USER]. Not cool at all.",2017-12-01 20:12:39+00:00,delivery_delay,delivery_delay
+2862058,2862058,"[USER] Order#111-3350270-9729064 (Oil Diffuser) and Order# 111-3362968-7934623-both say ""arriving today by 8pm"" but haven't even shipped. As shown in attached photos guaranteed delivery was today. When can I actually expect to receive? Clasps are time sensitive.",2017-11-27 22:43:16+00:00,delivery_delay,delivery_delay
+131657,131657,"amazonIN: Please check my conv. with your #Customerservice & tell me 1. How come 5-10 days from 17th Nov. constitute to 1st Dec.? 2. When an item takes max 2-3 days to reach me, why it takes 5-10 days to reach you? Are you running some different maths h…",2017-11-24 06:49:15+00:00,delivery_delay,delivery_delay
+1332686,1332686,[USER] why Order#405-0203877-8488360 is not being dispatched??,2017-10-27 13:10:55+00:00,order_status,order_status
+1960775,1960775,[USER] I purchased a PVR gift card from Amazon and it turned out that the card was invalid. I seek refund. Order# 404-5767638-0853158,2017-10-18 17:01:41+00:00,order_status,order_status
+779969,779969,[USER] Can't wait for the Echo to arrive 🙂🙂,2017-10-12 04:39:28+00:00,order_status,order_status
+1211660,1211660,As predicted yesterday [USER] screwed up another delivery more than 50% of my orders in the past 2 months 😤😤😤 beyond frustrated,2017-10-25 12:24:45+00:00,order_status,order_status
+464263,464263,[USER] 質問をさせていただきます。 出品者から購入した商品の返品を要請して、返金対応の連絡をいただいたのですが、Amazonさんを通しての返金ということですが、何かすることはありますか？,2017-12-01 03:37:54+00:00,order_status,order_status
+666958,666958,[USER] My Order ORDER # 112-5190224-8684248 Your site will not accept any of my Credit Cards HELP!,2017-11-23 03:07:40+00:00,order_status,order_status
+2700838,2700838,"Hey [USER] any tips for figuring out where ""AMAZON DIGITAL"" charge came from on my bank statement? Checked recent orders/Digital orders in my account, none match. This charge is unexpected/unfamiliar.",2017-11-19 20:27:02+00:00,order_status,order_status
+348791,348796,[USER] 4 days since order and 36 hours this tweet and still no shoes.,2017-10-09 14:38:02+00:00,order_status,order_status
+2551023,2551023,[USER] evening. Is it quite usual for a package to be delivered at 22:40??,2017-11-25 23:22:20+00:00,order_status,order_status
+2260558,2260558,[USER] what is AMZL US and where is my package?,2017-11-11 02:07:19+00:00,order_status,order_status
+544344,544344,[USER] delivery drivers are a joke,2017-12-02 16:52:59+00:00,other,other
+437956,437956,[USER] pls help me out ...,2017-10-10 17:35:55+00:00,other,other
+2917160,2917160,"Hey, [USER]? My cat's been staring at the Dot for hours on end and I think he's broken now? How do I troubleshoot this?",2017-11-28 22:06:24+00:00,other,other
+439635,439635,[USER] Can't log into my account on app/desktop/mobile sites. Need verification email. Tried lots of times. No email has arrived!,2017-10-11 10:21:36+00:00,other,other
+2811755,2811755,[USER]’s ‘Buy now with 1- Click’ is dangerous man🙄 #mypoorbankaccount,2017-11-22 08:01:33+00:00,other,other
+627803,627803,"Bonjour [USER] , un produit qui est encore en livraison vient de baisser de 20% de prix chez vous, il y a moyen d'avoir la différence ? Merci",2017-11-22 14:53:25+00:00,other,other
+1267615,1267615,[USER] My prime membership is going to expire on Nov 16. Can I buy membership before expiration date?,2017-10-16 06:08:22+00:00,other,other
+37644,37644,[USER] but i feel the subtlety of the issue is being lost in translation (2/2),2017-11-01 14:09:45+00:00,other,other
+2212099,2212099,[USER] if I already have a prime subscription for 1 year and on purchase if echo I get 1 yr prime membership free.. will the two overlap (I.e. I will get only 1 yr membership) or will be it be 2yrs,2017-11-10 04:48:49+00:00,other,other
+2383744,2383744,[USER],2017-10-20 07:16:35+00:00,other,other
+2206127,2206127,[USER] can we please fix this!,2017-11-09 21:53:17+00:00,other,other
+1116194,1116194,Why buy [USER] when the entire country is unable to use the device? It's just a door stopper now?,2017-10-15 11:24:48+00:00,other,other
+1616386,1616386,"Excess packaging again from [USER] [USER] 🙄 Happens so often, such a waste",2017-11-25 13:04:45+00:00,other,other
+982915,982915,#Amazon prime video down again !!!,2017-10-22 14:19:19+00:00,other,other
+80750,80750,"[USER] sold an iPhone to a buyer who requested return & returned phone with different IMEI. Apple confirmed the phone was not the same, and had also been tampered with. [USER] is taking the buyer’s side. I’m out $600! What can I do? What are my rights? [USER]",2017-11-30 12:58:18+00:00,other,other
+827900,827900,Amazon u don't have to send me a giant box to package a tiny item 😱 [USER],2017-10-08 22:55:48+00:00,other,other
+2426021,2426021,[USER] You really need to add a split payment option.,2017-11-14 19:04:04+00:00,other,other
+1623932,1623932,I ❤️[USER] for making weekends a bit easier!,2017-11-05 17:45:40+00:00,other,other
+834780,834780,[USER] [USER] [USER] Is this bangalore?,2017-10-13 07:40:18+00:00,other,other
+206765,206765,Apparently not if you pre-ordered through [USER] 🙄,2017-10-04 16:30:41+00:00,other,other
+2311432,2311432,[USER] delivery is a joke these days. 2 Times received message as parcel delivered and both the times i didn't receive anything. Loosing #faith in #amazon,2017-11-13 05:05:34+00:00,other,other
+1109454,1109454,[USER] Thanks for information,2017-10-15 09:07:17+00:00,other,other
+909031,909031,"[USER] Mais não tenho dim dim, para compra 😖😖😖😟😟",2017-10-21 00:03:23+00:00,other,other
+2374470,2374470,Don't know if I should be upset with [USER] or with [USER] or whoever pressed this record.,2017-11-14 01:58:12+00:00,other,other
+834469,834469,Hi [USER]/[USER] meet [USER] and Amazon meet Xbox. Now plz wrk together nd release PrimeVideos for Xbox India. Asap.,2017-10-13 07:23:58+00:00,other,other
+2472473,2472473,Looking at buying head torches on [USER] and come across this description: ‘With it's Stylish and Sleek Design - All your friends and family will want to wear one.’ Something tells me I’m about to become a trendsetter …,2017-11-15 11:21:37+00:00,other,other
+1745470,1745470,Why was I charged $1 for starting my 30 day [USER] prime trial? [USER],2017-10-17 19:41:38+00:00,other,other
+2064364,2064364,"[USER] [USER] My subscription of amazon prime is going to end soon, so i thought not to renew it As the services r not good lately",2017-11-08 08:45:01+00:00,other,other
+2446297,2446297,Amazonプライム月400円で漫画読み放題でアニメ映画見放題なの…？やばない…？？,2017-11-15 01:20:05+00:00,other,other
+2621095,2621095,I've really been impressed with [USER] support lately!,2017-11-17 15:41:24+00:00,other,other
+1179634,1179634,[USER] ive canceled my audible account multiple times and i keep getting charged for it,2017-10-24 21:53:13+00:00,other,other
+1589592,1589592,[USER] please find screenshot of mail. My contact 9881409002,2017-10-17 07:48:44+00:00,other,other
+1776399,1776399,Pues vamos con el capítulo 5 de 6 de la primera temporada de #LORE [USER] en [USER] muy enganchado y muy recomendable.,2017-11-07 23:46:37+00:00,other,other
+1311292,1311292,アマゾンパントリーが届いた。 こんなん、、いろいろ(笑),2017-11-05 12:01:06+00:00,other,other
+676895,676895,"[USER] All is hilarious here !!! I have returned your product to your address , may be it has been reached to you. But i have not got my refund yet..keep your product at you,,provide me quick refund ... i don't want it anymore...My shopping is over with you..!!!",2017-11-23 05:47:26+00:00,other,other
+922680,922680,"[USER] im getting the following error ""We're sorry! An error occurred when we tried to process your request..."" why is this happening?",2017-10-21 13:21:59+00:00,other,other
+1108306,1108306,[USER] is there any reason why my kindle would be so dark despite my phone brightness be turned up?,2017-11-08 14:19:26+00:00,other,other
+248152,248152,[USER] Will you please take care to refund my Rs 100/- unethically charged for shipment .,2017-10-05 16:06:25+00:00,other,other
+1488808,1488808,So the [USER] Standard plus edition on PS4 doesn't actually come with a strategy guide as advertised by [USER] [USER] thanks!,2017-11-03 12:58:23+00:00,other,other
+2897629,2897629,[USER] [USER] [USER] Thanks delivered,2017-11-28 16:27:44+00:00,other,other
+2755717,2755717,"Hey [USER] , ich dachte #WonderWoman sieht anders aus...muss ich mich wohl getäuscht haben🤔😂😂",2017-11-20 21:03:12+00:00,other,other
+170963,170963,[USER] Awful job here.,2017-11-24 21:55:46+00:00,other,other
+2383155,2383155,[USER] [USER] But they bill you on order or on shipping?,2017-10-20 07:17:32+00:00,other,other
+1359111,1359111,"Hi [USER], [USER], [USER] -- not sure who's at fault, but had I done this at my previous job, I would've been fired. #babyregistrygift",2017-10-27 19:53:38+00:00,other,other
+2634148,2634147,[USER] A estrenarrr 💥💥💥,2017-11-27 04:21:21+00:00,other,other
+2531288,2531288,So... Bluetooth und Amazon Music unlimited mit dem Auto verschwurbelt... läuft. So mag ich das.,2017-11-16 06:50:35+00:00,other,other
+1562859,1562859,[USER] Still no winner list????,2017-11-04 10:17:11+00:00,other,other
+814846,814846,[USER] ihr verwirrt mich. Kann ich mir den Early Access jetzt abschminken?,2017-10-12 20:14:44+00:00,other,other
+378530,378530,Amazon primeの学割的なコース、無料お試し期間半年をすっ飛ばして有料会員に登録出来ます？(ビデオとか使いたい),2017-10-09 05:10:36+00:00,other,other
+728815,728815,[USER] yaar the alexa app isn't available in india? why are you selling the echo then?,2017-10-11 07:50:53+00:00,product_availability,product_availability
+272426,272426,[USER] [USER] [USER] Any exchange offer for Lenovo K8 Note on ur Diwali sale? Pl give spl offer for my K8 Note.,2017-10-06 03:18:32+00:00,product_availability,product_availability
+2965205,2965205,[USER] how can you allow a buyer to fraudulently claim for non-delivery when tracked parcel has been delivered and signed for? #nojustice #noconsequences #raging,2017-11-29 22:31:10+00:00,wrong_delivery,wrong_delivery
+2760887,2760887,[USER] slacking. I ordered a wall mounted bottle opener. And this is what i get. [USER],2017-11-21 05:33:11+00:00,wrong_delivery,wrong_delivery
+1276278,1276278,"[USER] für das gleiche Paket, dass die Lieferung an den Absender zurückgegangen ist - warum auch immer. Und nun? Bei mir ist die Ware nicht.",2017-10-26 15:42:20+00:00,wrong_delivery,wrong_delivery
+519788,519788,"2 articles to Pune tracking :EK339483205IN and EK339483090IN,both are showing delivered but addressee not received consignment.This is repeatedly happening in Pune,Please inform Pune postal department head,it is serious matter,I am Amazon vendor,affecting business and Amazon's.",2017-12-02 02:28:13+00:00,wrong_delivery,wrong_delivery
+2815509,2815509,"[USER] Seriously? This is the fourth janky delivery in the last month. Here's a hint, I live in an apartment complex, has nothing to do with a business. My other packages were delivered just fine today. Sadly, I'm expecting my stuff to be delivered to the wrong apartment, AGAIN.",2017-11-27 02:58:01+00:00,wrong_delivery,wrong_delivery
+4861,4861,"To the person or persons that stole that big, heavy Amazon box of my porch today: enjoy 200 13 gallon garbage bags!",2017-10-31 23:11:36+00:00,wrong_delivery,wrong_delivery
+832107,832107,[USER] I provide delivery instructions why do the drivers fail to follow and pay attention to detail in order to deliver my package?,2017-10-13 05:22:52+00:00,wrong_delivery,wrong_delivery
+1075319,1075319,[USER] your customer service regarding sending me the wrong item was disappointing. And now I'm out of diapers for my 8 month old!!! 😩,2017-10-23 16:31:36+00:00,wrong_delivery,wrong_delivery
+2944238,2944238,[USER] una vez más Correos me la juega. Dice haber intentado dos veces la entrega y es falso. Alegan motivos técnicos pero mienten de cara a Amazon. Y yo sin mis productos.,2017-11-29 15:07:41+00:00,wrong_delivery,wrong_delivery
+2884074,2884074,"[USER] Laptop was supposed to come tomorrow, got a notification this morning it was left in 'safe space' i did not authorise a 'safe space'. Who leaves a laptop in an open drive on a busy road???!!!. Rushed home, 2 hours later laptop is nowhere to be found???!!!",2017-11-28 11:05:52+00:00,wrong_delivery,wrong_delivery
+1337234,1337234,[USER] bought a sofa and it shows delivered. But didnt receive anything. No contact details.... what to do now?,2017-10-27 14:06:00+00:00,wrong_delivery,wrong_delivery
+1867058,1867058,[USER] [USER] [USER] order an mi band hrx edition and got an old one in same cost as new one.1/3,2017-10-18 08:08:50+00:00,wrong_delivery,wrong_delivery
+235183,235183,[USER] chimney bought from [USER] on September 1st no installation or any visit by engineer [USER],2017-10-05 13:16:06+00:00,wrong_delivery,wrong_delivery
+1230296,1230296,Okay [USER] where is the ‘ordered kids dresses but got bottle of floor cleaner instead’ return category?,2017-10-25 20:37:34+00:00,wrong_delivery,wrong_delivery

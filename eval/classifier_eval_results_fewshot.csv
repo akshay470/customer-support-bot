@@ -1,0 +1,134 @@
+text,actual,predicted,confidence,match
+[USER] アカウントが乗っ取られた電話も繋がらないし利用停止に出来ません。,account_access,account_access,high,YES
+[USER] why isn't my account unblocked my you guys,account_access,account_access,high,YES
+[USER] My account is suspended from past 20 days and I was told as soon as I get feedback on that account it would be reviewed and reinstate the account I started getting the feedback but no sign of the activation of the account and I am helpless now as it is the only income source,account_access,account_access,high,YES
+"[USER] I need your help! I created an account, then I bought something, now I don't remember the email I used. Help me!",account_access,account_access,high,YES
+[USER] i have twitch prime now for about 5 month but since the beginning of the month i see adds again. I also checked that i have still amazon prime. Could you help me out with this problem?,account_access,other,medium,NO
+Extremely disappointed with the lack of #customerservice with [USER] Order 1__credit_card__ has yet to be delivered with the items described in the item description. Numerous chats and still being told I should reorder. Rethinking all future business with [USER] #amazonsucks,agent_escalation,delivery_delay,high,NO
+Amazon sale is very pathetic and fully dependable on their courier services. They even don't have final solution for their customers.,agent_escalation,other,high,NO
+Damn Christine from [USER] really did me dirty on their customer support page. #TrashService,agent_escalation,agent_escalation,high,YES
+[USER] just had the worst experience ever with Amazon chat and phone support! HELP!,agent_escalation,agent_escalation,high,YES
+[USER] I would like a full refund. Amazon really slapped my head.,agent_escalation,order_status,high,NO
+[USER] Amazon customer service is absolutely atrocious! I can't believe I've had to call customer service 5 times in the last week over this order!,agent_escalation,agent_escalation,high,YES
+[USER] [USER] #WTF unable to contact customer care. It's disconnecting after telling return time is over of every call. No othr option🤷🏻,agent_escalation,agent_escalation,high,YES
+[USER] Shining example of customer harassment Do u follow a SLA.. ur representative said on call due to festivals expect delay Will u ever refund,agent_escalation,delivery_delay,medium,NO
+[USER] order tracking method is very pathetic in amazon.they dont update for days the status of the shipment at that point of time.,agent_escalation,order_status,high,NO
+[USER] feeling harassed,agent_escalation,other,low,NO
+[USER] can you please make sure your delivery staff are polite and courteous to their customers! It is never nice to hear that they have been outright rude to your mother! Thanks x,agent_escalation,agent_escalation,medium,YES
+[USER] This link appears to be broken,agent_escalation,other,low,NO
+I really can’t handle stupid people this early in the morning. I’m talk to you [USER] Third call into customer “care” #annoyed,agent_escalation,agent_escalation,high,YES
+[USER] after over 5 escalations you have been unable to consistently follow delivery instructions Delivery person isn't receiving them,agent_escalation,delivery_delay,high,NO
+"[USER] - Get your ship together! Disgraceful [USER] - Rules are rules & company turns a blind eye to relentless drivers within our area using bots to automatically accept blocks. Not fair but don’t know how to solve, burying head in the sand.",agent_escalation,agent_escalation,high,YES
+"[USER] cancels my order. No email about problems. Only noticed it was gone when checking on other order. Chat rep says leadership will reply & make it right. Hr later get cancellation email. No other response. That's how they ""made it right."" [USER] sucks.",agent_escalation,order_status,medium,NO
+[USER] Buen día! me gustaría si pudieran proporcionarme el correo del coordinador del proyecto de artesanos!! Hay buenas noticias,contact_request,contact_request,high,YES
+[USER] pouvez vous me suivre j’ai besoin de vous envoyer un message privé svp Merci,contact_request,contact_request,high,YES
+[USER] do you have an email address to lodge formal complaints?,contact_request,contact_request,high,YES
+Usually a very good service from [USER] - but twice iv had something late now in the space of a week!!! Really annoying as one item was for work!!! Not happy 😡😡😡😡😡,delivery_delay,delivery_delay,high,YES
+"Dites [USER] c'est une blague vos livraisons, non ? Chez des voisins qui n'existent pas et même pas identifiés.",delivery_delay,delivery_delay,high,YES
+Vamos a ver [USER] q mola q querais adelantar los envios x eso d q nos llegue antes pero si digo tal dia es xq el resto NO estoy. Y no mola cuando los repartidores insisten en dejarselo a un vecino o tienda y t dicen q el dia pactado no saben si el paquete saldrá... MAL!,delivery_delay,delivery_delay,high,YES
+[USER] It's been 3 days now your support and delivery agents are blaming each other for the delay in delivery will I even get my orders?,delivery_delay,delivery_delay,high,YES
+[USER] Bonjour mon colis est depuis ce matin 10h en cours de livraison est-ce normal ? Colis C10044461663 Merci d'avance,delivery_delay,delivery_delay,high,YES
+[USER] Yes that too by 4 days.ORDER # 403-1855304-7621937 Please speed up the delivery process,delivery_delay,delivery_delay,high,YES
+And still waiting the amazon delivery. Supposed to be here by 8pm at the latest - I’m thinking it won’t arrive by then 😫,delivery_delay,delivery_delay,high,YES
+[USER] i have lately seen many instances of delivery persons not delivering orders on time & falsely citing ‘i couldn’t be contacted’.,delivery_delay,delivery_delay,high,YES
+buy today on [USER] prime (Sunday) arrives earliest Wednesday? have amazon got so much power that they have deleted Monday and Tuesday from the week schedule or is this not even close to next day delivery?,delivery_delay,delivery_delay,medium,YES
+"It seems that there is some delay, please update me the details , it is showing delayed it seems, Order# 402-7090913-5820366 [USER]",delivery_delay,delivery_delay,high,YES
+Pokémon Ultra Soleil que j’ai pré commander plus d’1 moi avant est toujours pas arrivé alors que Battlefront ll que j’ai acheté Vendredi ou Samedi est déjà arrivé cherchez l’erreur [USER] #WaitAndSee,delivery_delay,delivery_delay,high,YES
+[USER] your devilry boy not delivery and misbehavior language with my cell no. my order no. Tracking #: 447194187856,delivery_delay,delivery_delay,high,YES
+"[USER] bonjour, un de vos livreurs m’as appelé pendant que j’étais au travail pour un colis, celui-ci a disparu, impossible à joindre je ne sais pas où il est veillez me répondre. Cordialement",delivery_delay,wrong_delivery,high,NO
+"[USER] [USER] If you can't actually manage same day delivery, stop offering it. I'm tired of being let down by this non-service.",delivery_delay,delivery_delay,high,YES
+警視庁に、とっとと通報しました。 この間、Amazonさんとトラブったから言うけれど、配達ミスとかのポカはあるけれど、少なくとも、こんなツッコミどころ満載の杜撰な請求をしてくることはない。 ド丁寧な対応があったから、その点は信頼してる。,delivery_delay,other,medium,NO
+amazon has 27.5 minutes left to deliver my package and i'm literally waiting on them at the door like:,delivery_delay,delivery_delay,high,YES
+.[USER] c'est bien de dire en chat et par mail que je vais recevoir ma cde ce jour pour au final apprendre que non #passérieux 😒,delivery_delay,delivery_delay,high,YES
+[USER] This is ridiculous. [USER] says they attempted to deliver my package two hours into the future. COME ON.,delivery_delay,delivery_delay,high,YES
+[USER] you didn't deliver to my neighbour like you said you would!!!now 3 days late,delivery_delay,wrong_delivery,high,NO
+[USER] I'm trying to get more options for this late product but it's stuck at this box? Im just looking for a refund,delivery_delay,delivery_delay,high,YES
+"[USER] Hello, I've received a notification saying my item has been delivered. I've been home all day and can assure you it hasn't. Where is it please? Order # 206-1480209-2756313",delivery_delay,delivery_delay,high,YES
+I love when Amazon say that they have delivered something when you see the van drive up next to your house and then drive up without actually delivering anything 👌,delivery_delay,delivery_delay,high,YES
+Hey [USER] could you keep your delivery drivers from being unacceptably lazy and not attempting delivery and then stealing my packages? I want same day delivery not 3 days later and to be robbed. CNt wait for a viable competition in the market,delivery_delay,delivery_delay,high,YES
+[USER] [USER] [USER] Kindly note I haven't received any phone calls for delivery. Also I'm receiving courier service at my address since last 5 years.,delivery_delay,delivery_delay,high,YES
+[USER] Amazon courier guys in India fail to deliver order for 5 days in row and then badmouth your customers. Order# 403-0161310-6974739,delivery_delay,delivery_delay,high,YES
+I’m going to start giving my business to [USER] or [USER] - at least they can deliver a package on time. [USER] u should stop ‘guaranteeing’ delivery if 6 times out of the last 8 you couldn’t make it work. Same address 10 years! Why?,delivery_delay,delivery_delay,high,YES
+[USER] my package says delivery but there is nothing at my door! How do I report it??,delivery_delay,wrong_delivery,high,NO
+[USER] I have ordered one plus 5 on 16oct but till yet I didn't receive my product it should be on 20th oct Kindly provide my product,delivery_delay,delivery_delay,high,YES
+"Rubbish service #amazon .. order Thurs, next day delivery.. it’s Sunday night. For 3 days it’s been out for delivery .. USELESS [USER]",delivery_delay,delivery_delay,high,YES
+When [USER] loses not 1 but 2 of your packages in less than 48 hours. #BLESSED,delivery_delay,delivery_delay,high,YES
+"[USER] [USER] Not sure why are we meeting so often. 406-9869071-4315507 showing delivered, I think I have gone blind as I can't see it at my home. Pathetic recurring mistake for a babycare product.",delivery_delay,wrong_delivery,high,NO
+"Two deliveries failed to turn up today, and not a single notification or reason given. Both out for delivery, but never showed. Such poor service. Not cool, [USER]. Not cool at all.",delivery_delay,delivery_delay,high,YES
+"[USER] Order#111-3350270-9729064 (Oil Diffuser) and Order# 111-3362968-7934623-both say ""arriving today by 8pm"" but haven't even shipped. As shown in attached photos guaranteed delivery was today. When can I actually expect to receive? Clasps are time sensitive.",delivery_delay,delivery_delay,high,YES
+"amazonIN: Please check my conv. with your #Customerservice & tell me 1. How come 5-10 days from 17th Nov. constitute to 1st Dec.? 2. When an item takes max 2-3 days to reach me, why it takes 5-10 days to reach you? Are you running some different maths h…",delivery_delay,delivery_delay,high,YES
+[USER] why Order#405-0203877-8488360 is not being dispatched??,order_status,order_status,high,YES
+[USER] I purchased a PVR gift card from Amazon and it turned out that the card was invalid. I seek refund. Order# 404-5767638-0853158,order_status,order_status,medium,YES
+[USER] Can't wait for the Echo to arrive 🙂🙂,order_status,order_status,medium,YES
+As predicted yesterday [USER] screwed up another delivery more than 50% of my orders in the past 2 months 😤😤😤 beyond frustrated,order_status,delivery_delay,high,NO
+[USER] 質問をさせていただきます。 出品者から購入した商品の返品を要請して、返金対応の連絡をいただいたのですが、Amazonさんを通しての返金ということですが、何かすることはありますか？,order_status,order_status,high,YES
+[USER] My Order ORDER # 112-5190224-8684248 Your site will not accept any of my Credit Cards HELP!,order_status,order_status,high,YES
+"Hey [USER] any tips for figuring out where ""AMAZON DIGITAL"" charge came from on my bank statement? Checked recent orders/Digital orders in my account, none match. This charge is unexpected/unfamiliar.",order_status,order_status,high,YES
+[USER] 4 days since order and 36 hours this tweet and still no shoes.,order_status,order_status,high,YES
+[USER] evening. Is it quite usual for a package to be delivered at 22:40??,order_status,delivery_delay,high,NO
+[USER] what is AMZL US and where is my package?,order_status,order_status,medium,YES
+[USER] delivery drivers are a joke,other,agent_escalation,medium,NO
+[USER] pls help me out ...,other,other,low,YES
+"Hey, [USER]? My cat's been staring at the Dot for hours on end and I think he's broken now? How do I troubleshoot this?",other,other,high,YES
+[USER] Can't log into my account on app/desktop/mobile sites. Need verification email. Tried lots of times. No email has arrived!,other,account_access,high,NO
+[USER]’s ‘Buy now with 1- Click’ is dangerous man🙄 #mypoorbankaccount,other,other,medium,YES
+"Bonjour [USER] , un produit qui est encore en livraison vient de baisser de 20% de prix chez vous, il y a moyen d'avoir la différence ? Merci",other,order_status,medium,NO
+[USER] My prime membership is going to expire on Nov 16. Can I buy membership before expiration date?,other,other,medium,YES
+[USER] but i feel the subtlety of the issue is being lost in translation (2/2),other,agent_escalation,high,NO
+[USER] if I already have a prime subscription for 1 year and on purchase if echo I get 1 yr prime membership free.. will the two overlap (I.e. I will get only 1 yr membership) or will be it be 2yrs,other,other,high,YES
+[USER],other,other,low,YES
+[USER] can we please fix this!,other,other,medium,YES
+Why buy [USER] when the entire country is unable to use the device? It's just a door stopper now?,other,product_availability,high,NO
+"Excess packaging again from [USER] [USER] 🙄 Happens so often, such a waste",other,other,high,YES
+#Amazon prime video down again !!!,other,other,high,YES
+"[USER] sold an iPhone to a buyer who requested return & returned phone with different IMEI. Apple confirmed the phone was not the same, and had also been tampered with. [USER] is taking the buyer’s side. I’m out $600! What can I do? What are my rights? [USER]",other,wrong_delivery,medium,NO
+Amazon u don't have to send me a giant box to package a tiny item 😱 [USER],other,other,medium,YES
+[USER] You really need to add a split payment option.,other,other,high,YES
+I ❤️[USER] for making weekends a bit easier!,other,other,high,YES
+[USER] [USER] [USER] Is this bangalore?,other,product_availability,medium,NO
+Apparently not if you pre-ordered through [USER] 🙄,other,product_availability,medium,NO
+[USER] delivery is a joke these days. 2 Times received message as parcel delivered and both the times i didn't receive anything. Loosing #faith in #amazon,other,delivery_delay,high,NO
+[USER] Thanks for information,other,other,high,YES
+"[USER] Mais não tenho dim dim, para compra 😖😖😖😟😟",other,other,high,YES
+Don't know if I should be upset with [USER] or with [USER] or whoever pressed this record.,other,agent_escalation,medium,NO
+Hi [USER]/[USER] meet [USER] and Amazon meet Xbox. Now plz wrk together nd release PrimeVideos for Xbox India. Asap.,other,product_availability,high,NO
+Looking at buying head torches on [USER] and come across this description: ‘With it's Stylish and Sleek Design - All your friends and family will want to wear one.’ Something tells me I’m about to become a trendsetter …,other,other,high,YES
+Why was I charged $1 for starting my 30 day [USER] prime trial? [USER],other,other,medium,YES
+"[USER] [USER] My subscription of amazon prime is going to end soon, so i thought not to renew it As the services r not good lately",other,account_settings,high,NO
+Amazonプライム月400円で漫画読み放題でアニメ映画見放題なの…？やばない…？？,other,other,high,YES
+I've really been impressed with [USER] support lately!,other,other,high,YES
+[USER] ive canceled my audible account multiple times and i keep getting charged for it,other,account_settings,medium,NO
+[USER] please find screenshot of mail. My contact 9881409002,other,contact_request,medium,NO
+Pues vamos con el capítulo 5 de 6 de la primera temporada de #LORE [USER] en [USER] muy enganchado y muy recomendable.,other,other,high,YES
+アマゾンパントリーが届いた。 こんなん、、いろいろ(笑),other,wrong_delivery,medium,NO
+"[USER] All is hilarious here !!! I have returned your product to your address , may be it has been reached to you. But i have not got my refund yet..keep your product at you,,provide me quick refund ... i don't want it anymore...My shopping is over with you..!!!",other,order_status,high,NO
+"[USER] im getting the following error ""We're sorry! An error occurred when we tried to process your request..."" why is this happening?",other,account_access,medium,NO
+[USER] is there any reason why my kindle would be so dark despite my phone brightness be turned up?,other,other,high,YES
+[USER] Will you please take care to refund my Rs 100/- unethically charged for shipment .,other,other,medium,YES
+So the [USER] Standard plus edition on PS4 doesn't actually come with a strategy guide as advertised by [USER] [USER] thanks!,other,wrong_delivery,high,NO
+[USER] [USER] [USER] Thanks delivered,other,other,high,YES
+"Hey [USER] , ich dachte #WonderWoman sieht anders aus...muss ich mich wohl getäuscht haben🤔😂😂",other,other,high,YES
+[USER] Awful job here.,other,agent_escalation,medium,NO
+[USER] [USER] But they bill you on order or on shipping?,other,order_status,medium,NO
+"Hi [USER], [USER], [USER] -- not sure who's at fault, but had I done this at my previous job, I would've been fired. #babyregistrygift",other,other,medium,YES
+[USER] A estrenarrr 💥💥💥,other,other,low,YES
+So... Bluetooth und Amazon Music unlimited mit dem Auto verschwurbelt... läuft. So mag ich das.,other,other,high,YES
+[USER] Still no winner list????,other,other,high,YES
+[USER] ihr verwirrt mich. Kann ich mir den Early Access jetzt abschminken?,other,account_settings,high,NO
+Amazon primeの学割的なコース、無料お試し期間半年をすっ飛ばして有料会員に登録出来ます？(ビデオとか使いたい),other,other,medium,YES
+[USER] yaar the alexa app isn't available in india? why are you selling the echo then?,product_availability,product_availability,high,YES
+[USER] [USER] [USER] Any exchange offer for Lenovo K8 Note on ur Diwali sale? Pl give spl offer for my K8 Note.,product_availability,product_availability,high,YES
+[USER] how can you allow a buyer to fraudulently claim for non-delivery when tracked parcel has been delivered and signed for? #nojustice #noconsequences #raging,wrong_delivery,agent_escalation,medium,NO
+[USER] slacking. I ordered a wall mounted bottle opener. And this is what i get. [USER],wrong_delivery,wrong_delivery,high,YES
+"[USER] für das gleiche Paket, dass die Lieferung an den Absender zurückgegangen ist - warum auch immer. Und nun? Bei mir ist die Ware nicht.",wrong_delivery,delivery_delay,high,NO
+"2 articles to Pune tracking :EK339483205IN and EK339483090IN,both are showing delivered but addressee not received consignment.This is repeatedly happening in Pune,Please inform Pune postal department head,it is serious matter,I am Amazon vendor,affecting business and Amazon's.",wrong_delivery,wrong_delivery,medium,YES
+"[USER] Seriously? This is the fourth janky delivery in the last month. Here's a hint, I live in an apartment complex, has nothing to do with a business. My other packages were delivered just fine today. Sadly, I'm expecting my stuff to be delivered to the wrong apartment, AGAIN.",wrong_delivery,wrong_delivery,high,YES
+"To the person or persons that stole that big, heavy Amazon box of my porch today: enjoy 200 13 gallon garbage bags!",wrong_delivery,wrong_delivery,high,YES
+[USER] I provide delivery instructions why do the drivers fail to follow and pay attention to detail in order to deliver my package?,wrong_delivery,wrong_delivery,medium,YES
+[USER] your customer service regarding sending me the wrong item was disappointing. And now I'm out of diapers for my 8 month old!!! 😩,wrong_delivery,wrong_delivery,high,YES
+[USER] una vez más Correos me la juega. Dice haber intentado dos veces la entrega y es falso. Alegan motivos técnicos pero mienten de cara a Amazon. Y yo sin mis productos.,wrong_delivery,delivery_delay,high,NO
+"[USER] Laptop was supposed to come tomorrow, got a notification this morning it was left in 'safe space' i did not authorise a 'safe space'. Who leaves a laptop in an open drive on a busy road???!!!. Rushed home, 2 hours later laptop is nowhere to be found???!!!",wrong_delivery,delivery_delay,high,NO
+[USER] bought a sofa and it shows delivered. But didnt receive anything. No contact details.... what to do now?,wrong_delivery,delivery_delay,high,NO
+[USER] [USER] [USER] order an mi band hrx edition and got an old one in same cost as new one.1/3,wrong_delivery,wrong_delivery,high,YES
+[USER] chimney bought from [USER] on September 1st no installation or any visit by engineer [USER],wrong_delivery,order_status,medium,NO
+Okay [USER] where is the ‘ordered kids dresses but got bottle of floor cleaner instead’ return category?,wrong_delivery,wrong_delivery,high,YES

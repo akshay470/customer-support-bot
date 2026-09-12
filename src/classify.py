@@ -10,16 +10,27 @@ from dotenv import load_dotenv
 from groq import Groq
 
 from src.intents import INTENTS
+try:
+    from src.few_shots import FEW_SHOTS
+except ImportError:
+    FEW_SHOTS = {}
 
 logger = logging.getLogger(__name__)
 
 # Build the system prompt dynamically from INTENTS
 taxonomy_str = "\n".join([f"- {k}: {v}" for k, v in INTENTS.items()])
 
+few_shots_str = ""
+if FEW_SHOTS:
+    few_shots_str = "\nHere are some examples to guide you:\n"
+    for intent, examples in FEW_SHOTS.items():
+        for ex in examples:
+            few_shots_str += f"Example of {intent}: '{ex}' -> {intent}\n"
+
 SYSTEM_PROMPT = f"""You are a customer support intent classifier.
 Categorize the user's message into exactly ONE of the following categories:
 {taxonomy_str}
-
+{few_shots_str}
 You must respond in strict JSON format with exactly two keys:
 1. "intent": The chosen category name.
 2. "confidence": "high", "medium", or "low" based on how directly the reasoning matched your chosen category.
@@ -48,11 +59,12 @@ def classify_intent(text: str, client=None, max_retries=3) -> dict:
     for attempt in range(max_retries):
         try:
             response = client.chat.completions.create(
-                model="qwen/qwen3.8-27b",
+                model="openai/gpt-oss-20b",
                 messages=[
                     {"role": "system", "content": SYSTEM_PROMPT},
                     {"role": "user", "content": text}
-                ]
+                ],
+                timeout=15.0
             )
             val = response.choices[0].message.content.strip()
             

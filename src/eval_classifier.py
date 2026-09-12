@@ -7,11 +7,13 @@ project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(project_root)
 
 from src.classify import classify_intent, get_client
+import logging
+logging.basicConfig(level=logging.WARNING)
 
 def main():
-    csv_path = os.path.join(project_root, "notebooks", "sample_for_labeling_prelabeled.csv")
+    csv_path = os.path.join(project_root, "eval", "held_out_test_set.csv")
     df = pd.read_csv(csv_path)
-    
+
     label_col = 'intent_label'
     if label_col not in df.columns or df[label_col].isna().all():
         print(f"Error: {label_col} column is missing or entirely null!")
@@ -67,8 +69,8 @@ def main():
             confusions[pair] = confusions.get(pair, 0) + 1
             
         elapsed = time.time() - start_time
-        if elapsed < 1.5:
-            time.sleep(1.5 - elapsed)
+        if elapsed < 3.5:
+            time.sleep(3.5 - elapsed)
             
         if (i + 1) % 20 == 0 or (i + 1) == total:
             print(f"Processed {i + 1} / {total} rows...")
@@ -102,7 +104,7 @@ def main():
     # Save results
     eval_dir = os.path.join(project_root, "eval")
     os.makedirs(eval_dir, exist_ok=True)
-    results_path = os.path.join(eval_dir, "classifier_eval_results.csv")
+    results_path = os.path.join(eval_dir, "classifier_eval_results_fewshot.csv")
     
     pd.DataFrame(results).to_csv(results_path, index=False)
     print(f"\nSaved full results to {results_path}")
