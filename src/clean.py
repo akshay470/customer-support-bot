@@ -27,6 +27,9 @@ def clean_text(text: str) -> str:
     # Mask @mentions/handles as [USER]
     text = re.sub(r'@\w+', '[USER]', text)
     
+    # Strip trailing signatures like ^MA or ^AZ
+    text = re.sub(r'\s*\^[A-Za-z]{1,3}\b\s*$', '', text)
+    
     # Remove excessive whitespace (newlines, tabs, multiple spaces)
     text = re.sub(r'\s+', ' ', text).strip()
     

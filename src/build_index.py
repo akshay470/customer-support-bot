@@ -19,8 +19,14 @@ def main():
     with open(threads_path, 'r', encoding='utf-8') as f:
         threads = json.load(f)
         
-    resolved = [t for t in threads if t.get('is_resolved')]
-    print(f"Loaded {len(threads)} total threads. Filtered to {len(resolved)} resolved threads.")
+    # Exclude the golden set (eval set)
+    import pandas as pd
+    csv_path = os.path.join(project_root, "notebooks", "sample_for_labeling_prelabeled.csv")
+    df_golden = pd.read_csv(csv_path)
+    golden_thread_ids = set(df_golden['thread_id'].astype(str))
+        
+    resolved = [t for t in threads if t.get('is_resolved') and str(t['thread_id']) not in golden_thread_ids]
+    print(f"Loaded {len(threads)} total threads. Filtered to {len(resolved)} resolved threads (excluding golden set).")
     
     metadata = []
     texts = []
