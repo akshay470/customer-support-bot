@@ -1,5 +1,5 @@
 pandas
 numpy
 tqdm
-google-genai
+groq
 python-dotenv

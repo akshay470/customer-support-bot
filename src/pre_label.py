@@ -12,9 +12,9 @@ import pandas as pd
 from dotenv import load_dotenv
 
 try:
-    from google import genai
+    from groq import Groq
 except ImportError:
-    logging.error("Please install the Gemini SDK: pip install google-genai python-dotenv")
+    logging.error("Please install the Groq SDK: pip install groq python-dotenv")
     exit(1)
 
 logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
@@ -41,16 +41,18 @@ Your response must be ONLY the category name (e.g., "delivery_delay" or "other")
 
 def call_llm_with_retry(client, text, row_idx, max_retries=3):
     """
-    Calls the Gemini API with simple exponential backoff for rate limits.
+    Calls the Groq API with simple exponential backoff for rate limits.
     """
     for attempt in range(max_retries):
         try:
-            interaction = client.interactions.create(
-                model="gemini-3.6-flash",
-                input=text,
-                system_instruction=SYSTEM_PROMPT
+            response = client.chat.completions.create(
+                model="llama-3.1-8b-instant",
+                messages=[
+                    {"role": "system", "content": SYSTEM_PROMPT},
+                    {"role": "user", "content": text}
+                ]
             )
-            val = interaction.output_text.strip().lower()
+            val = response.choices[0].message.content.strip().lower()
             # Basic cleanup in case the LLM includes punctuation
             return val.replace("'", "").replace('"', '').replace('.', '')
             
@@ -71,14 +73,14 @@ def main():
     # Load env vars explicitly from that file FIRST
     load_dotenv(dotenv_path=env_path)
     
-    api_key = os.getenv("GEMINI_API_KEY")
+    api_key = os.getenv("GROQ_API_KEY")
     if not api_key:
-        logger.error(f"No GEMINI_API_KEY found. Looked for .env file exactly at: {env_path}")
+        logger.error(f"No GROQ_API_KEY found. Looked for .env file exactly at: {env_path}")
         return
         
     logger.info(f"Loaded .env successfully from: {env_path}")
     
-    client = genai.Client(api_key=api_key)
+    client = Groq(api_key=api_key)
     
     input_path = os.path.join("notebooks", "sample_for_labeling.csv")
     output_path = os.path.join("notebooks", "sample_for_labeling_prelabeled.csv")
