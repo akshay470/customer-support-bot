@@ -46,7 +46,7 @@ def call_llm_with_retry(client, text, row_idx, max_retries=3):
     for attempt in range(max_retries):
         try:
             response = client.chat.completions.create(
-                model="llama-3.1-8b-instant",
+                model="qwen/qwen3.8-27b",
                 messages=[
                     {"role": "system", "content": SYSTEM_PROMPT},
                     {"role": "user", "content": text}
