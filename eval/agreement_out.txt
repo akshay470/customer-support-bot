@@ -1,0 +1,15 @@
+
+--- Judge vs Human Agreement Analysis (1 rows compared) ---
+
+Dimension       | Exact Match %   | Mean Abs Diff   | Correlation (Spearman)   
+---------------------------------------------------------------------------
+Groundedness    |           0.0% |          1.00 |         NaN (Zero Var)
+Relevance       |           0.0% |          1.00 |         NaN (Zero Var)
+Tone            |           0.0% |          1.00 |         NaN (Zero Var)
+Completeness    |           0.0% |          1.00 |         NaN (Zero Var)
+Overall         |           0.0% |          1.00 |         NaN (Zero Var)
+---------------------------------------------------------------------------
+
+Compared 1 complete rows. Agreement is generally poor or practically none (Average Spearman correlation: 0.00).
+
+Full row-by-row comparison saved to: eval/judge_human_agreement.csv
