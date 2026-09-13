@@ -22,7 +22,24 @@ _METADATA = None
 def get_model():
     global _MODEL
     if _MODEL is None:
-        _MODEL = SentenceTransformer('all-MiniLM-L6-v2')
+        try:
+            _MODEL = SentenceTransformer('all-MiniLM-L6-v2', local_files_only=True)
+            logger.info("Loaded embedding model aggressively from local cache.")
+        except Exception as local_err:
+            logger.info("Model not found in aggressive local cache. Fetching with network retry logic...")
+            max_retries = 3
+            for attempt in range(max_retries):
+                try:
+                    _MODEL = SentenceTransformer('all-MiniLM-L6-v2')
+                    logger.info("Successfully fetched matching model from Hugging Face.")
+                    break
+                except Exception as net_err:
+                    if attempt < max_retries - 1:
+                        logger.warning(f"Failed to fetch model (Attempt {attempt+1}/{max_retries}): {net_err}. Retrying in 5s...")
+                        time.sleep(5.0)
+                    else:
+                        logger.error(f"Failed to fetch embedding model permanently after {max_retries} attempts.")
+                        raise net_err
     return _MODEL
 
 def load_index():
