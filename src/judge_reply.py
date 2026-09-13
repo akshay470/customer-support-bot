@@ -38,7 +38,7 @@ Evaluate the drafted reply on the following 4 dimensions using a 1-5 scale (1=Po
 - completeness: Does the reply fully resolve the issue, or provide the exact appropriate next steps (e.g. asking for order number)?
 - overall: Overall rating of the reply quality (1-5)
 
-Return your evaluation EXACTLY as a JSON object matching this schema, completely unformatted (no markdown blocks, no markdown ticks, just raw JSON):
+Respond with ONLY a single valid JSON object. No markdown formatting, no explanation text before or after, no code fences. Just the raw JSON object starting with { and ending with }:
 {
     "groundedness": 5,
     "relevance": 5,
@@ -82,12 +82,19 @@ DRAFTED REPLY:
             
             raw_content = response.choices[0].message.content.strip()
             
-            # Simple regex to extract JSON object
-            import re
-            json_match = re.search(r'\{.*\}', raw_content, re.DOTALL)
-            if json_match:
-                return json.loads(json_match.group())
-            return json.loads(raw_content)
+            # Strip markdown fences if present
+            raw_content = raw_content.replace('```json', '').replace('```', '')
+            
+            # Extract exactly from first { to last }
+            start_idx = raw_content.find('{')
+            end_idx = raw_content.rfind('}')
+            
+            if start_idx != -1 and end_idx != -1 and end_idx >= start_idx:
+                json_str = raw_content[start_idx:end_idx+1]
+            else:
+                json_str = raw_content
+                
+            return json.loads(json_str)
             
         except groq.APIStatusError as e:
             if e.status_code == 429: # Rate limit
@@ -113,8 +120,9 @@ DRAFTED REPLY:
                 logger.error(f"Groq API Error: {e}")
                 break
         except Exception as e:
-            logger.error(f"Error during judging: {e}")
-            break
+            logger.warning(f"Error during judging (attempt {attempt+1}/{max_retries}): {e}. Retrying...")
+            time.sleep(2.0)
+            continue
             
     # Fallback response on failure
     return {
