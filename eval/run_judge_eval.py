@@ -114,8 +114,30 @@ def main():
         df_human[col] = ""
         
     human_path = os.path.join(eval_dir, "human_review_template.csv")
-    df_human.to_csv(human_path, index=False)
-    print(f"Saved human review template ({len(df_human)} rows) to {human_path}")
+    
+    should_write = True
+    if os.path.exists(human_path):
+        try:
+            existing_df = pd.read_csv(human_path)
+            has_data = False
+            for col in human_cols:
+                if col in existing_df.columns:
+                    # Check for non-null and non-blank values
+                    if existing_df[col].notna().any():
+                        non_empty = existing_df[col].dropna().astype(str).str.strip() != ""
+                        if non_empty.any():
+                            has_data = True
+                            break
+            if has_data:
+                should_write = False
+                print(f"\nWARNING: human_review_template.csv already contains human scores. Skipping regeneration to avoid data loss. Delete the file manually first if you want to regenerate it.")
+        except Exception as e:
+            should_write = False
+            print(f"\nWARNING: Could not securely read existing human_review_template.csv. Skipping generation to avoid accidental data loss.")
+            
+    if should_write:
+        df_human.to_csv(human_path, index=False)
+        print(f"Saved human review template ({len(df_human)} rows) to {human_path}")
     
     # Calculate distributions
     if not df_results.empty and 'overall' in df_results.columns:
