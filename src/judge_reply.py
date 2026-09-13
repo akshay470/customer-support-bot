@@ -45,7 +45,7 @@ Respond with ONLY a single valid JSON object. No markdown formatting, no explana
     "tone": 5,
     "completeness": 5,
     "overall": 5,
-    "judge_reasoning": "Quick explanation of why these scores were given, noting any specific flaws."
+    "judge_reasoning": "Quick explanation of why these scores were given, noting any specific flaws. (keep judge_reasoning under 40 words)"
 }
 """
 
@@ -77,7 +77,8 @@ DRAFTED REPLY:
                     {"role": "user", "content": user_prompt}
                 ],
                 temperature=0.0,
-                max_tokens=300
+                max_tokens=1000,
+                timeout=15.0
             )
             
             raw_content = response.choices[0].message.content.strip()
